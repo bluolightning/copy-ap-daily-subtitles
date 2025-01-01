@@ -14,11 +14,13 @@ document.addEventListener('keydown', (event) => {
             captionLine = captionLine.slice(0, captionLine.length);
         }
 
+        captionLine = captionLine.trimEnd(); // Filters any excess whitespace
+
         // Writes the caption to the clipboard
         navigator.clipboard
             .writeText(captionLine)
             .then(() => {
-                console.log('Text copied to clipboard!');
+                console.log('"' + captionLine + '"' + ' copied to clipboard!');
             })
             .catch((err) => {
                 console.error('Failed to copy text: ', err);
