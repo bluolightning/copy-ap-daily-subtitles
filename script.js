@@ -1,9 +1,5 @@
-const lineSeparator = '/n'; // Whatever text should be inbetween lines if there are multiple lines
+const lineSeparator = '\n'; // Whatever text should be inbetween lines if there are multiple lines
 const key = 'c'; // The key that should be pressed to copy subtitles
-
-if (str.endsWith(suffix)) {
-    str = str.slice(0, -suffix.length);
-}
 
 document.addEventListener('keydown', (event) => {
     if (event.key === key) {
@@ -11,7 +7,7 @@ document.addEventListener('keydown', (event) => {
         let captionLine = '';
         const captions = document.querySelectorAll('.w-captions-line');
         captions.forEach((element) => {
-            captionLine += element.innerText + lineSeperator;
+            captionLine += element.innerText + lineSeparator;
         });
         
         // Filters out the lineSeparator at the end
