@@ -1,0 +1,22 @@
+javascript: (() => {
+    const lineSeparator = '\n';
+    const key = 'c';
+    document.addEventListener('keydown', (event) => {
+        if (event.key === key) {
+            let captionLine = '';
+            const captions = document.querySelectorAll('.w-captions-line');
+            captions.forEach((element) => {
+                captionLine += element.innerText + lineSeparator;
+            });
+            if (captionLine.endsWith(lineSeparator)) {
+                captionLine = captionLine.slice(0, captionLine.length - lineSeparator.length);
+            }
+            captionLine = captionLine.trimEnd();
+            navigator.clipboard.writeText(captionLine).then(() => {
+                console.log('"' + captionLine + '"' + ' copied to clipboard!');
+            }).catch((err) => {
+                console.error('Failed to copy text: ', err);
+            });
+        }
+    });
+})();
