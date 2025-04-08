@@ -1,5 +1,7 @@
 # Usage Instructions
 
+This program copies the subtitles of AP videos on AP Classroom (unaffiliated).
+
 1. Open bookmarklet.txt and copy the code
 2. Right click on the bookmark bar and hit 'Add page' (or similar text)
 3. Paste the code into a browser bookmark's url
