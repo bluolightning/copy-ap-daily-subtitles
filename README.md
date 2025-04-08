@@ -9,3 +9,6 @@
 - If it isn't working or is copying multiple times, try refreshing the page and clicking the bookmarklet again
 
 Pressing 'c' copies the current subtitle to the clipboard. (The exact key can be customized in the code)
+
+To customize which key needs to be pressed to copy the subtitle, alter the 'key' variable in the code (it's on line 3 in bookmarklet.txt).
+```const key = '<the key you want to press>'```
